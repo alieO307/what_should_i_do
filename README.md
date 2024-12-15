@@ -26,5 +26,37 @@ Pages within the app occasionally display with inconsistent styles.
 Hardcoded Categories:
 Current implementation uses hardcoded categories, limiting user flexibility. Users cannot create or delete categories dynamically.
 
+Before you start, ensure you have the following installed on your system:
+Python (version 3.8 or later)
+Pip (Python package installer)
+
+Download the Project
+
+Click the green Code button in the repository.
+Select Download ZIP.
+Extract the ZIP file to your desired directory.
+Navigate to the Project Directory Open a terminal and move to the project folder:
+
+cd path/to/your/extracted/folder
+Set Up a Virtual Environment (Optional)
+
+python -m venv venv
+source venv/bin/activate   
+venv\Scripts\activate     
+Install Dependencies Use pip to install the required Python packages:
+
+pip install -r requirements.txt
+Set Up the Environment Variables Create a .env file in the project’s root directory and add the following:
+
+DJANGO_SECRET_KEY=your-secret-key
+DEBUG=True in settings.py
+
+Apply Database Migrations Initialize the database and apply migrations:
+python manage.py migrate
+
+Run the Development Server Start the Django development server:
+python manage.py runserver
+
+
 
 
