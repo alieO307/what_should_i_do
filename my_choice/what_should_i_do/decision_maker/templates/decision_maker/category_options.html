@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>{{ category.name }}</h1>
+    <ul class="option-list">
+        {% for option in category.options.all %}
+        <li>{{ option.name }}</li>
+        {% endfor %}
+    </ul>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="option_name" placeholder="Add a new option">
+        <button type="submit">Add</button>
+    </form>
+    <a href="{% url 'categories' %}">Back to Categories</a>
+</div>

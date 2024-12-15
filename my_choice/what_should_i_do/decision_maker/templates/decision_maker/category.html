@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ category_name }}</title>
+</head>
+<body>
+    <h1>Options for {{ category }}</h1>
+    <ul>
+        {% for option in options %}
+            <li>{{ option.option }}</li>
+        {% empty %}
+            <li>No options available in this category.</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'home'%}">Back Home</a><br>
+
+    <a href="{% url 'add_option' %}">Add a new option</a><br>
+</body>
+</html>
